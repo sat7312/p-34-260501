@@ -26,6 +26,7 @@ class PostService(private val postRepository: PostRepository) {
     fun deleteById(id: Int) =
         postRepository.deleteById(id)
 
+    //Todo Optional 제거
     fun findById(id: Int): Optional<Post> =
         postRepository.findById(id)
 
