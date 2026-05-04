@@ -41,11 +41,11 @@ class MemberService(
         memberRepository.count()
 
     //Todo Optional 제거
-    fun findByUsername(username: String): Optional<Member?> =
+    fun findByUsername(username: String): Optional<Member> =
         memberRepository.findByUsername(username)
 
     //Todo Optional 제거
-    fun findByApiKey(apiKey: String): Optional<Member?> =
+    fun findByApiKey(apiKey: String): Optional<Member> =
         memberRepository.findByApiKey(apiKey)
 
     fun genAccessToken(member: Member): String =
