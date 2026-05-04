@@ -10,7 +10,7 @@ data class MemberWithUsernameDto(
     val username: String,
     val nickname: String?,
     val createDate: LocalDateTime,
-    val modifyDate: LocalDateTime?
+    val modifyDate: LocalDateTime
 ) {
     constructor(member: Member) : this(
         member.id,
