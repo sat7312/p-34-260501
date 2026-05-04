@@ -7,7 +7,6 @@ import com.back.global.rq.Rq
 import jakarta.servlet.FilterChain
 import jakarta.servlet.http.HttpServletRequest
 import jakarta.servlet.http.HttpServletResponse
-import lombok.RequiredArgsConstructor
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import org.springframework.security.core.Authentication
 import org.springframework.security.core.context.SecurityContextHolder
@@ -107,12 +106,10 @@ class CustomAuthenticationFilter(
         if (member == null) {
             member = memberService
                 .findByApiKey(apiKey)
-                .orElseThrow {
-                    ServiceException(
+                ?:throw ServiceException(
                         "401-3",
                         "API 키가 유효하지 않습니다."
-                    )
-                }
+                )
         }
 
         if (isAccessTokenExists && !isAccessTokenValid) {
