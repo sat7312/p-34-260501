@@ -1,6 +1,5 @@
 package com.back.domain.post.post.controller
 
-import com.back.domain.member.service.MemberService
 import com.back.domain.post.post.dto.PostDto
 import com.back.domain.post.post.entity.Post
 import com.back.domain.post.post.service.PostService
