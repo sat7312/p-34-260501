@@ -1,5 +1,5 @@
-//package com.back.domain.post.comment.controller
-//
+package com.back.domain.post.comment.controller
+
 //import com.back.domain.member.entity.Member
 //import com.back.domain.member.repository.MemberRepository
 //import com.back.domain.post.comment.entity.Comment
