@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.User
 class SecurityUser(
     val id: Int,
     username: String,
-    password: String?,
+    password: String,
     val nickname: String,
-    authorities: MutableCollection<out GrantedAuthority>
+    authorities: Collection<GrantedAuthority>
 ) : User(username, password, authorities)
